@@ -13,8 +13,6 @@ function App() {
 
   useEffect(() => {
     fetchAPI();
-    // console.log(msg);
-    // setMesage('new message');
   }, []);
 
   return (
