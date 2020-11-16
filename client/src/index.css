@@ -1,5 +1,57 @@
+:root{
+  --brand: #20374C !important;
+  --brand-alt: #7D585B !important;
+}
+
+.text-brand {
+  color: var(--brand) !important;
+}
+.bg-brand {
+  background-color: var(--brand) !important;
+}
+
+.text-brand-alt {
+  color: var(--brand-alt) !important;
+}
+.bg-brand-alt {
+  background-color: var(--brand-alt) !important;
+}
+
+.hero {
+  background: url('./assets/hero.png') center;
+  overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  position: absolute;
+}
+.btn-container>div {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
 @media screen and (min-width: 768px) {
   .form-home {
     min-width: 375px;
+  }
+}
+@media screen and (min-width: 768px) and (min-height: 600px) {
+  .btn-container {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+  }
+
+  .btn-container>div {
+    width: 47.5%;
+    display: inline-block;
+  }
+  .btn-container>div:first-child {
+    margin-right: 5%;
   }
 }
