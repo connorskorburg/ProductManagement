@@ -1,8 +1,9 @@
+/* css variables */
 :root{
   --brand: #20374C !important;
   --brand-alt: #7D585B !important;
 }
-
+/* custom classes */
 .text-brand {
   color: var(--brand) !important;
 }
@@ -16,7 +17,7 @@
 .bg-brand-alt {
   background-color: var(--brand-alt) !important;
 }
-
+/* background image */
 .hero {
   background: url('./assets/hero.png') center;
   overflow: hidden;
@@ -30,17 +31,59 @@
   height: 100%;
   position: absolute;
 }
+/* button container */
 .btn-container>div {
   width: 100%;
   display: block;
   margin-bottom: 1rem;
 }
+
+/* media queries */
+
+/* tablets and larger */
 @media screen and (min-width: 768px) {
   .form-home {
     min-width: 375px;
   }
 }
-@media screen and (min-width: 768px) and (min-height: 600px) {
+/* up to tablets */
+@media screen and (max-width: 768px) {
+  .display-1 {
+    font-size: 3rem !important;
+  }
+  .lead {
+    font-size: 1.5rem !important;
+  }
+}
+/* tablet to small desktop */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .display-1 {
+    font-size: 4rem !important;
+  }
+  .lead {
+    font-size: 1.75rem !important;
+  }
+}
+/* small desktop to medium desktop */
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  .display-1 {
+    font-size: 5rem !important;
+  }
+  .lead {
+    font-size: 1.75rem !important;
+  }
+}
+/* medium desktop and larger */
+@media screen and (min-width: 1501px) {
+  .display-1 {
+    font-size: 7.5rem !important;
+  }
+  .lead {
+    font-size: 2.25rem !important;
+  }
+}
+/* change buttons if tablet or larger and taller than phone size */
+@media screen and (min-width: 768px) and (min-height: 450px) {
   .btn-container {
     width: 100%;
     display: flex;

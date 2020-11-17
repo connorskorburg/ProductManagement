@@ -17,7 +17,7 @@ const Home = () => {
 				fluid
 			>
 				<div className="text-center px-3">
-					<h1 className="w-100 font-weight-bold">Product Manager</h1>
+					<h1 className="w-100 display-1 font-weight-bold">Product Manager</h1>
 					<p className="lead py-3">Manage your professional and personal inventory all in one place</p>
 					<Nav className="btn-container">
 						<NavDropdown
