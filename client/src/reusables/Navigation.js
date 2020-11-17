@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 const Navigation = (props) => {
   console.log({ props });
   return (
-    <Navbar expand="lg" bg='light' fixed='top' className='px-5-l'>
+    <Navbar expand="lg" bg='light' fixed='top' className='px-5-l shadow-2'>
       <Navbar.Brand className='font-weight-bold text-brand'>PRODMNG</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" >

@@ -6,11 +6,11 @@ import about from '../../assets/about.svg';
 
 const About = () => {
 	return (
-		<Container id="about" className="pt-4 px-4 px-lg-5 bg-light" fluid>
+		<Container id="about" className="pt-4 px-4 px-lg-5 bg-gray" fluid>
 			<h2 className="text-center pt-lg-4 pb-2 border-bottom-alt font-weight-bold text-brand display-2">About</h2>
 			<Row
 				style={{ height: '85vh' }}
-				className="bg-light flex-row-reverse justify-content-center align-items-center"
+				className="bg-gray flex-row-reverse justify-content-center align-items-center"
 			>
 				<Col xs={12} lg={6} className="w-100">
 					<img src={about} className="w-100 ml-xl-5" />

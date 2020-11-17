@@ -25,6 +25,9 @@ html, body {
 .bg-brand-alt {
   background-color: var(--brand-alt) !important;
 }
+.border-bottom-brand {
+  border-bottom: 3px solid var(--brand) !important;
+}
 .border-bottom-alt {
   border-bottom: 3px solid var(--brand-alt) !important;
 }
@@ -47,6 +50,22 @@ html, body {
   width: 100%;
   display: block;
   margin-bottom: 1rem;
+}
+
+.shadow-1 {
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.shadow-2 {
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.shadow-3 {
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
+
+.bg-gray {
+  background-color: #e7e7e7;
 }
 
 .row {
