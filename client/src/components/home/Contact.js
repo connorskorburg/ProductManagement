@@ -20,17 +20,19 @@ const Contact = () => {
         <h2 className="text-center pt-lg-4 pb-2 border-bottom-alt font-weight-bold text-white display-2">Contact</h2>
         <Row>
           <Col>
+            {/* Contact Form */}
             <Form className='mt-3 mr-lg-5'>
+              {/* Full name */}
               <FormGroup controlId="name">
                 <FormLabel className='text-white font-weight-bold mt-2'>Name</FormLabel>
                 <FormControl type="text" placeholder="Enter Full Name" />
               </FormGroup>
-
+              {/* Email */}
               <FormGroup controlId="email">
                 <FormLabel className='text-white font-weight-bold mt-2'>Email</FormLabel>
                 <FormControl type="email" placeholder="Email" />
               </FormGroup>
-
+              {/* Message */}
               <FormGroup controlId="message">
                 <FormLabel className='text-white font-weight-bold mt-2'>Message</FormLabel>
                 <FormControl placeholder='Enter Your Message' as="textarea" rows={10} />
@@ -38,6 +40,7 @@ const Contact = () => {
               <Button type='submit' className='bg-brand-alt text-white font-weight-bold btn-block btn'>Send Message</Button>
             </Form>
           </Col>
+          {/* Contact Links */}
           <Col className='d-none d-lg-inline-flex align-items-center justify-content-center'>
             <div className='ml-xl-5'>
               <a className='d-block mb-5 text-white font-weight-bold' href='https://github.com/connorskorburg/ProductManagement' target='_blank' rel='noreferrer'>
@@ -50,7 +53,7 @@ const Contact = () => {
           </Col>
         </Row>
       </Container>
-
+      {/* Footer shown on small screen size */}
       <Row className='d-lg-none bg-white py-2 justify-content-around text-center'>
         <Col>
           <a href='https://github.com/connorskorburg/ProductManagement' target='_blank' rel='noreferrer'>
