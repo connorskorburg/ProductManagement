@@ -4,7 +4,14 @@ const cors = require('cors');
 
 app.use(cors());
 
-app.get('/', (req, res) => res.json({ 'message': 'hello world again' }));
+app.get('/', (req, res) => {
+  res.json({ 'message': 'welcome to prodmng' });
+});
+
+app.post('/login', (req, res) => {
+  console.log(req, res);
+  res.json({ 'messaage': 'login' });
+});
 
 const PORT = process.env.PORT || 3001;
 

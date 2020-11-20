@@ -1,10 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
 
 const Hero = () => {
 	return (
@@ -19,38 +15,11 @@ const Hero = () => {
 				<h1 className="w-100 display-1 font-weight-bold">Product Manager</h1>
 				<p className="lead py-3">Manage your professional and personal inventory all in one place</p>
 				<Nav className="btn-container">
-					<NavDropdown
-						className="btn bg-light"
-						title={<span className="text-brand font-weight-bold">Login</span>}
-						id="login-dropdown-hero"
-					>
-						<Form className="p-3 form-home">
-							<FormControl type="text" placeholder="Email" className="mr-sm-2 mt-2" />
-							<FormControl type="password" placeholder="Password" className="mr-sm-2 mt-2" />
-							<Button variant="success" className="btn-block mt-2">
-								Login
-							</Button>
-						</Form>
-					</NavDropdown>
-					<NavDropdown
-						className="btn bg-brand-alt"
-						title={<span className="text-white font-weight-bold">Get Started</span>}
-						id="register-dropdown-hero"
-					>
-						<Form className="p-3 form-home">
-							<FormControl type="text" placeholder="First Name" className="mr-sm-2 mt-2" />
-							<FormControl type="text" placeholder="Last Name" className="mr-sm-2 mt-2" />
-							<FormControl type="text" placeholder="Email" className="mr-sm-2 mt-2" />
-							<FormControl type="password" placeholder="Password" className="mr-sm-2 mt-2" />
-							<FormControl type="password" placeholder="Confirm Password" className="mr-sm-2 mt-2" />
-							<Button variant="success" className="btn-block mt-2">
-								Register
-							</Button>
-						</Form>
-					</NavDropdown>
+					<a href='#about' className='btn btn-brand-alt text-white py-2 font-weight-bold lead-small btn-block mt-2 form-home'>Learn More</a>
+					<a href='#contact' className='btn btn-white text-brand py-2 font-weight-bold lead-small bg-white btn-block mt-2 form-home'>Contact</a>
 				</Nav>
 			</div>
-		</Container>
+		</Container >
 	);
 };
 

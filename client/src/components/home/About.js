@@ -6,7 +6,7 @@ import about from '../../assets/about.svg';
 
 const About = () => {
 	return (
-		<Container id="about" className="pt-4 px-4 px-lg-5 bg-gray" fluid>
+		<Container style={{ minHeight: '100vh' }} id="about" className="pt-4 px-4 px-lg-5 bg-gray" fluid>
 			<h2 className="text-center pt-lg-4 pb-2 border-bottom-alt font-weight-bold text-brand display-2">About</h2>
 			<Row
 				style={{ height: '85vh' }}

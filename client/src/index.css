@@ -46,10 +46,30 @@ html, body {
   position: absolute;
 }
 /* button container */
-.btn-container>div {
+.btn-container>a{
   width: 100%;
   display: block;
   margin-bottom: 1rem;
+}
+
+.btn-brand-alt {
+  background-color: var(--brand-alt) !important;
+}
+.btn-brand-alt:hover{
+  cursor: pointer;
+  background-color: #b48589 !important;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+  transition: all 350ms ease-in-out;
+}
+
+.btn-white {
+  background-color: #fff !important;
+}
+.btn-white:hover{
+  cursor: pointer;
+  background-color: #ccc !important;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+  transition: all 350ms ease-in-out;
 }
 
 .shadow-1 {
@@ -85,6 +105,9 @@ html, body {
   .lead {
     font-size: 1.25rem !important;
   }
+  .lead-small {
+    font-size: 1rem !important;
+  }
   .lead-alt {
     font-size: 1rem !important;
     line-height: 2rem !important;
@@ -108,6 +131,9 @@ html, body {
   .lead {
     font-size: 1.5rem !important;
   }
+  .lead-small {
+    font-size: 1.15rem !important;
+  }
   .lead-alt {
     font-size: 1.25rem !important;
     text-align: center !important;
@@ -124,6 +150,9 @@ html, body {
   .lead {
     font-size: 1.75rem !important;
   }
+  .lead-small {
+    font-size: 1.15rem !important;
+  }
   .lead-alt {
     font-size: 1.5rem !important;
   }
@@ -138,6 +167,9 @@ html, body {
   }
   .lead {
     font-size: 1.75rem !important;
+  }
+  .lead-small {
+    font-size: 1.25rem !important;
   }
   .lead-alt {
     font-size: 1.5rem !important;
@@ -155,6 +187,9 @@ html, body {
   .lead {
     font-size: 2.25rem !important;
   }
+  .lead-small {
+    font-size: 1.5rem !important;
+  }
   .lead-alt {
     font-size: 2rem !important;
     line-height: 4.25rem !important;
@@ -168,11 +203,11 @@ html, body {
     justify-items: center;
   }
 
-  .btn-container>div {
+  .btn-container>a {
     width: 47.5%;
     display: inline-block;
   }
-  .btn-container>div:first-child {
+  .btn-container>a:first-child {
     margin-right: 5%;
   }
 }
