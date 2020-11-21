@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
   res.json({ 'message': 'welcome to prodmng' });
 });
 
-app.post('/login', (req, res) => {
+app.post('/contact', (req, res) => {
   console.log(req, res);
   res.json({ 'messaage': 'login' });
 });
