@@ -36,7 +36,10 @@ const Contact = () => {
       'email': '',
       'message': ''
     })
+<<<<<<< HEAD
     console.log('email sent')
+=======
+>>>>>>> 3ab3650108ad136e326e7a7ff027af13f4e1031f
   }
 
   return (
