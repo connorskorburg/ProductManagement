@@ -26,20 +26,18 @@ const Contact = () => {
     setInput({ ...input, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async e => {
+  const handleSubmit = e => {
     e.preventDefault();
-    await axios.post('http://localhost:3001/contact', input)
+    console.log('handle submit');
+    axios.post('http://localhost:3001/contact', input)
       .then(res => console.log(res))
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
     setInput({
       'name': '',
       'email': '',
       'message': ''
     })
-<<<<<<< HEAD
     console.log('email sent')
-=======
->>>>>>> 3ab3650108ad136e326e7a7ff027af13f4e1031f
   }
 
   return (
