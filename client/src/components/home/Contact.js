@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form';
 import FormLabel from 'react-bootstrap/FormLabel';
@@ -11,9 +11,34 @@ import linkedinDark from '../../assets/linkedinDark.svg';
 import linkedinWhite from '../../assets/linkedinWhite.svg';
 import githubDark from '../../assets/githubDark.svg';
 import githubWhite from '../../assets/githubWhite.svg';
-
+import axios from 'axios';
 
 const Contact = () => {
+
+  const [input, setInput] = useState({
+    'name': '',
+    'email': '',
+    'message': ''
+  });
+
+  const handleChange = e => {
+    e.preventDefault();
+    setInput({ ...input, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    await axios.post('http://localhost:3001/contact', input)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+    setInput({
+      'name': '',
+      'email': '',
+      'message': ''
+    })
+    console.log('email sent')
+  }
+
   return (
     <Fragment>
       <Container id='contact' style={{ height: 'fit-content' }} className='py-5 px-lg-5 bg-brand' fluid>
@@ -21,21 +46,21 @@ const Contact = () => {
         <Row>
           <Col>
             {/* Contact Form */}
-            <Form className='mt-3 mr-lg-5'>
+            <Form className='mt-3 mr-lg-5' onSubmit={(e) => handleSubmit(e)}>
               {/* Full name */}
               <FormGroup controlId="name">
                 <FormLabel className='text-white font-weight-bold mt-2'>Name</FormLabel>
-                <FormControl type="text" placeholder="Enter Full Name" />
+                <FormControl name='name' onChange={(e) => handleChange(e)} value={input.name} type="text" placeholder="Enter Full Name" />
               </FormGroup>
               {/* Email */}
               <FormGroup controlId="email">
                 <FormLabel className='text-white font-weight-bold mt-2'>Email</FormLabel>
-                <FormControl type="email" placeholder="Email" />
+                <FormControl name='email' onChange={(e) => handleChange(e)} value={input.email} type="email" placeholder="Email" />
               </FormGroup>
               {/* Message */}
               <FormGroup controlId="message">
                 <FormLabel className='text-white font-weight-bold mt-2'>Message</FormLabel>
-                <FormControl placeholder='Enter Your Message' as="textarea" rows={10} />
+                <FormControl name='message' onChange={(e) => handleChange(e)} value={input.message} placeholder='Enter Your Message' as="textarea" rows={10} />
               </FormGroup>
               <Button type='submit' className='bg-brand-alt text-white font-weight-bold btn-block btn'>Send Message</Button>
             </Form>
