@@ -7,7 +7,6 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
 const Navigation = ({ page }) => {
-  console.log({ page });
   return (
     <Navbar expand="lg" bg='light' fixed='top' className='px-5-l shadow-2'>
       <Navbar.Brand className='font-weight-bold text-brand'>PRODMNG</Navbar.Brand>

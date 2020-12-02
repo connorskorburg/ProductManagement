@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const mysql = require('mysql');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
@@ -8,6 +9,14 @@ require('dotenv').config();
 app.use(express.json());
 app.use(cors());
 app.use(express.json());
+
+const connection = mysql.createConnection({
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASS,
+});
+
+connection.connect((err) => err ? console.error(err) : console.log('connected'));
 
 app.get('/', (req, res) => {
   res.json({ 'message': 'welcome to prodmng' });
